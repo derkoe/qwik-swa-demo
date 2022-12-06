@@ -6,7 +6,7 @@ export default extendConfig(baseConfig, () => {
   return {
     build: {
       ssr: true,
-      outDir: 'dist/server',
+      outDir: 'azure/server',
       rollupOptions: {
         input: ['src/entry.azure-swa.tsx', '@qwik-city-plan'],
         output: {

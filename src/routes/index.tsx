@@ -1,13 +1,30 @@
-import { component$ } from '@builder.io/qwik';
-import type { DocumentHead } from '@derkoe/qwik-city';
-import { Link } from '@derkoe/qwik-city';
+import { component$, Resource } from '@builder.io/qwik';
+import type { DocumentHead, RequestHandler } from '@derkoe/qwik-city';
+import { Link, useEndpoint } from '@derkoe/qwik-city';
+
+interface RandomData {
+  value1: number;
+}
+
+export const onGet: RequestHandler<RandomData> = async () => {
+  return {
+    value: Math.random()
+  }
+};
 
 export default component$(() => {
+  const randomData = useEndpoint<RandomData>();
   return (
     <div>
       <h1>
         Welcome to Qwik <span class="lightning">⚡️</span>
       </h1>
+
+      <Resource value={randomData} 
+        onPending={() => <div>Loading...</div>}
+        onRejected={() => <div>Error</div>}
+        onResolved={(random) => <h2>The random value generated in the backend is {random.value}</h2>}>
+      </Resource>
 
       <ul>
         <li>
