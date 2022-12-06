@@ -21,6 +21,6 @@
     "rewrite": "/api/server"
   },
   "platform": {
-    "apiRuntime": "node:16"
+    "apiRuntime": "node:18"
   }
 }
