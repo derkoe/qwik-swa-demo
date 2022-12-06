@@ -1,0 +1,23 @@
+{
+  "routes": [
+    {
+      "route": "/build/*"
+    },
+    {
+      "route": "/favicon.ico"
+    },
+    {
+      "route": "/.auth/*"
+    },
+    {
+      "route": "/*",
+      "rewrite": "/api/server"
+    }
+  ],
+  "navigationFallback": {
+    "rewrite": "/api/server"
+  },
+  "platform": {
+    "apiRuntime": "node:16"
+  }
+}
