@@ -18,14 +18,14 @@
     "fmt.check": "prettier --check .",
     "lint": "eslint \"src/**/*.ts*\"",
     "preview": "qwik build preview && vite preview --open",
-    "serve": "netlify dev",
+    "serve": "swa start",
     "start": "vite --open --mode ssr",
     "qwik": "qwik"
   },
   "devDependencies": {
     "@azure/static-web-apps-cli": "1.0.3",
     "@builder.io/qwik": "0.15.2",
-    "@derkoe/qwik-city": "0.0.129",
+    "@derkoe/qwik-city": "0.0.130",
     "@types/eslint": "8.4.10",
     "@types/node": "latest",
     "@typescript-eslint/eslint-plugin": "5.45.0",
