@@ -4,7 +4,10 @@
       "route": "/build/*"
     },
     {
-      "route": "/favicon.ico"
+      "route": "/favicon.svg"
+    },
+    {
+      "route": "/manifest.json"
     },
     {
       "route": "/.auth/*"
