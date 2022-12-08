@@ -14,7 +14,7 @@
     },
     {
       "route": "/service-worker.js"
-    }
+    },
     {
       "route": "/*",
       "rewrite": "/api/server"
