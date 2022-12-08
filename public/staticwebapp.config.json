@@ -16,7 +16,7 @@
       "route": "/service-worker.js"
     }
     {
-      "route": "/*",5
+      "route": "/*",
       "rewrite": "/api/server"
     }
   ],
