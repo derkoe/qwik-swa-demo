@@ -1,5 +1,5 @@
-import { azureSwaAdaptor } from '@derkoe/qwik-city/adaptors/azure-swa/vite';
-import { extendConfig } from '@derkoe/qwik-city/vite';
+import { azureSwaAdaptor } from '@builder.io/qwik-city/adaptors/azure-swa/vite';
+import { extendConfig } from '@builder.io/qwik-city/vite';
 import baseConfig from '../../vite.config';
 
 export default extendConfig(baseConfig, () => {
@@ -21,7 +21,9 @@ export default extendConfig(baseConfig, () => {
     },
     plugins: [
       azureSwaAdaptor({
-        staticGenerate: true,
+        ssg: {
+          include: ['*'],
+        },
       }),
     ],
   };
